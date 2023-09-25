@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background: url(./images/aky.jpg);
 }
+.App-logo{
+  height: 100vh;
+  width: 100vw;
+}
+@keyframes text{
+  from{
+    transform: translateX(-600px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+.headers{
+  font-size: 100px;
+  animation: text 2.5s ease-in-out 0s 3 normal forwards;
+  transition: all 4s ease-in-out;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: white;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: 1600;
+  letter-spacing: -60%;
+  size: 100px;
+  font-family: 'Times New Roman', Times, serif;
+}
+@keyframes shorse-twigle{
+  0%,100%{
+    transform: translate(0, -100px) rotate(0deg);
+  }
+  50%{
+    transform: translate(0,-100px) rotate(10deg);
+  }
+  80%{
+    transform: translate(0,-100px) rotate(-10deg);
+  }
+}
+.shorse{
+  animation: shorse-twigle 2s ease-in-out 2s infinite;
+  transition: transform 2s ease-in-out;
+  height: 35vh;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.video-class {
+  width: 100vw;
+  height :100vh;
+  margin: 0;
+  
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+.footers{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 6rem;
+  height: 6rem;
+  color: white;
+  text-wrap: nowrap;
+}
+@media (max-width :768px){
+  .footers{
+    font-size: 30px;
+  }
+  .headers{
+    font-size: 50px;
+  }
 }
